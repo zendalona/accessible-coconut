@@ -873,3 +873,101 @@ apt search libreoffice
 add-apt-repository ppa:danielrichter2007/grub-customizer 
 apt-get install grub-customizer 
 ```
+
+
+
+
+<h2> Customizing Tips and Tricks</h2>  
+
+  
+
+1 To watch changes in dconf use :
+```
+dconf watch /  
+```
+
+ 
+
+2. Dumb dconf gsettings :
+```
+    dconf dump /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ > bkp 
+```
+  
+
+3.To watch a directory use : 
+```
+inotifywatch -e modify,create,delete -r ~/.config 
+```
+  
+
+4.Never use - inside Volume ID  
+
+  
+
+5.Always fill Release Name Completely like "Accessible-Coconut 24.04 LTS "Noble Numbat" - Release amd64" 
+
+  
+
+6.Copy files to filesystem directly without using cubic version which is slower  
+
+  
+
+7.MathJax_Math is our default font  
+
+  
+
+8.Use onboard to test Alt+Ctrl+Backspace to logout in virtual box enviroment 
+
+  
+
+9.Updating the system 
+```
+  
+
+apt-get update 
+
+  
+
+apt-mark hold plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo gnome-session-canberra 
+
+firefox* libreoffice* plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-text  
+
+ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork 
+
+  
+
+apt-get upgrade 
+
+  
+
+apt-mark unhold plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo gnome-session-canberra 
+
+firefox* libreoffice* plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-text  
+
+ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork 
+
+  
+
+apt-get clean 
+
+ ```
+
+ 
+
+<h2>Disclaimer</h2> 
+    
+  Copyright (c) 2025 - Zendalona 
+  All rights reserved . Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:  
+  Redistributions of source code must retain the below copyright notice, this list of conditions and the following disclaimer.  
+  Redistributions in binary form must reproduce the below copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.  
+  Neither the name of the nor the Lios team names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.  
+
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."  
+
+  
+
+<h3>FREE SOFTWARE FREE SOCIETY</h3> 
+
+ We firmly believe that accessibility is not alone a matter of speech and tactile support, but it can be a thing of intuition as well. 
+
+For your feedback and suggestion contact:info@zendalona.com  
