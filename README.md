@@ -1,6 +1,7 @@
 **Accessible-Coconut** is a community-driven GNU/Linux operating system that is fully accessible for individuals with visual impairments. AC is based on Ubuntu MATE. The goal is to create a free and open-source desktop environment that is accessible without relying on vision.
 
 **Version Accessible-Coconut-24.04.01**
+
 Note : This version of GNU/Linux distribution is not for sale. However charges for installation, maintenance and training is deserving.
 
 
