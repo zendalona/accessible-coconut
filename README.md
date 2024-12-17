@@ -1,6 +1,6 @@
 **Accessible-Coconut** is a community-driven GNU/Linux operating system that is fully accessible for individuals with visual impairments. AC is based on Ubuntu MATE. The goal is to create a free and open-source desktop environment that is accessible without relying on vision.
 
-**Version Accessible-Coconut-24.04.01**
+<h1>Version Accessible-Coconut-24.04.01</h1>
 
 Note : This version of GNU/Linux distribution is not for sale. However charges for installation, maintenance and training is deserving.
 
@@ -99,7 +99,7 @@ Now update launcher database update
 update-desktop-database
 ```
 
-Updating Schemas 
+<h3>Updating Schemas</h3> 
 
 We need to edit the “/usr/share/glib-2.0/schemas/org.mate.marco.gschema.xml” 
 
@@ -237,11 +237,9 @@ Default Menu bar items and their positions defined
 ```
    nano /usr/share/mate-panel/layouts/familiar.layout 
 ```
-  What to edit: 
-
-    Add the following:  
+  Add the following:  
 ```
-   [Object menu-bar] 
+[Object menu-bar] 
 
 object-type=menu-bar 
 
@@ -599,7 +597,7 @@ dpkg-reconfigure keyboard-configuration
 ```
 nano /etc/default/grub 
 ```
-Then add the below to the file: 
+   Then add the below to the file: 
 ```
 GRUB_INIT_TUNE="2000 400 4 0 1 500 4 0 1 600 4 0 1 800 6 0 1 800 8" 
 
@@ -607,62 +605,43 @@ GRUB_BACKGROUND="/usr/share/Coconut/grub.png"
 ```
 2. Microphone noise reduction script 
 
-• Check script “ microphone_realtime_background_noise_reduction.sh” 
+	• Check script “ microphone_realtime_background_noise_reduction.sh” in /usr/share/Coconut/ 
 
- in 
+	• If not Copy and paste 
 
-/usr/share/Coconut/ 
-
-• If not Copy and paste 
-
- 
 
 3. Microphone noise reduction Launcher 
 
-• Check file “ microphone_realtime_background_noise_reduction.desktop” 
+	• Check file “ microphone_realtime_background_noise_reduction.desktop” 
+ 	in /usr/local/share/applications/ 
 
- in 
-
-/usr/local/share/applications/ 
-
-• If not Copy and paste 
+	• If not Copy and paste 
 
 
 <h3>Default Configurations and for the first Run</h3> 
 
-When every user created, we must give common application configurations 
+When every user created, we must give common application configurations so copy /etc/skel without these files .bash_logout,.bashrc,.profile .
+ Press Ctrl+H to visible Hidden files
+ 
+1. open .config there will a directory named autostart inside that there will be 4 files 
 
-1. Copy - NB : don’t copy and paste (. bash_logout, .bashrc, .profile) and 
+	1. artha.desktop 
 
-don’t alter the existing files (. bash_logout, .bashrc, .profile) in the new 
+	2. canberra-gtk-play.desktop - which we used to play initial music 
 
-AC — read 15th point(what I've done here is copied the files from old AC except the files mentioned above ) 
+	3. firstrun.desktop 
 
-/etc/skel 
+	4. transmission-gtk.desktop 
+	
+2. Templates - for caja file manager context menu 
 
-1. Press Ctrl+H to visible Hidden files 
+3. User Guide 
 
-2. open .config there will a directory named autostart inside that there 
-
-will be 4 files 
-
-1. artha.desktop 
-
-2. canberra-gtk-play.desktop - which we used to play initial music 
-
-3. firstrun.desktop 
-
-4. transmission-gtk.desktop 
-
-3. Templates - for caja file manager context menu 
-
-4. User Guide 
-
-5. open artha.conf in .conf 
+4. open artha.conf in .conf 
 ```
 Notifications=false 
 ```
-6. preferences.cfg in .lios(lios) 
+5. preferences.cfg in .lios(lios) 
 ```
 run_text_cleaner = 1 
 
@@ -670,7 +649,7 @@ language = 3
 
 speech-language = 12 
 ```
-7. open .config/ubuntu-mate/welcome/preferences.json 
+6. open .config/ubuntu-mate/welcome/preferences.json 
 
 Add this line(Welcome message disable) 
 ```
@@ -686,28 +665,28 @@ Add this line(Welcome message disable)
 
  ```
 
-8. .curlew
+7. .curlew
    1. Curlew configuration file for setting current folder as destination directory 
    2. Play sound after finish
    3. replace with UUSSEERR 
 
-9. LMMS
+8. LMMS
    1 ~/Documents/lmms
    2 .lmmsrc.xml Basic LMMS configuration 
    3 replace with UUSSEERR 
 
-10. .config/vlc/vlcrc
+9. .config/vlc/vlcrc
     1.Starting dialog
     2. Volume 
 
-11. .config/smplayer/smplayer.ini 
+10. .config/smplayer/smplayer.ini 
 ```
 volume=100 
 ```
-12. .config/uGet/category/0000.json
+11. .config/uGet/category/0000.json
     1. Download directory 
 
-13. .local/share/orca not copied  
+12. .local/share/orca not copied  
   1 - Rate -> 65  
   2 - shortcuts for increasing and  decreasing orca speed(UP/Down), pitch(Right/Left), Volume(Home/End) 
 	3 - Orca preferences default voice to English (Great Britain) (Denis)  
@@ -715,18 +694,18 @@ volume=100
   5  - SBW orca preferences ( Disable key echo and Enable echo by character)
 	6 - sayAllStyle changed to sentence using full stop 
 
-14. Default Applications setted using prefered applications
+13. Default Applications setted using prefered applications
     1.Copy /skel/.config/mimeapps.list 
 
-15. Do not copy/include - 1 .bash_logout 2 .bashrc 3 .profile
+14. Do not copy/include - 1 .bash_logout 2 .bashrc 3 .profile
 
 <h3>Script to run after user creation added</h3> 
 
 1. Copy adduser.local file from old AC to new AC same path OR 
 
-/usr/local/sbin/ 
+   	 /usr/local/sbin/ 
 
-Create a file adduser.local in the above path and copy the below 
+   	 Create a file adduser.local in the above path and copy the below 
 ```
 # $1-username $2-uid $3-gid $4-home-directory-without-trailing-slash 
 
@@ -752,9 +731,8 @@ chmod +x /usr/local/sbin/adduser.local
 Add Coconut-slideshow user guide, 
 1. Slideshow Check for Slideshow.py in 
 
-/usr/share/Coconut/ 
-
-if not Copy and paste 
+ /usr/share/Coconut/ 
+  if not Copy and paste 
 
 2. Uncheck Auto removal of ubiquity-slideshow-ubuntu-mate  
 ```
@@ -786,9 +764,8 @@ Path: /usr/share/plymouth/themes/ubuntu-mate-logo/
 
 3. Edit boot selection screen name to AC 
 
-Open cubic-Press Next Button-select Boot 
-edit grub.cfg and loopback.cfg  
-Replaced “quiet splash” with “textonly"; also change the Ubuntu-mate to Accessible-Coconut 
+ Open cubic-Press Next Button-select Boot 
+  edit grub.cfg and loopback.cfg Replaced “quiet splash” with “textonly"; also change the Ubuntu-mate to Accessible-Coconut 
 
 4. Change - Ubiquity installer icon 
 
